@@ -84,16 +84,16 @@ const seleksi = (Keberangkatan, Tujuan) =>{
 
 const Item = ({ Keberangkatan, Tujuan, maskapai_id, Tanggal }) => (
   <View style={styles.item}>
-    <View style={styles.row}>
-        <Text style={styles.col}>{BANDARA[Keberangkatan].bandara_nama}</Text>
-        <Text style={styles.col}> - </Text>
-        <Text style={styles.col}>{BANDARA[Tujuan].bandara_nama}</Text> 
+    <View style={styles.baris}>
+        <Text style={styles.baris1}>{BANDARA[Keberangkatan].bandara_nama}</Text>
+        <Text style={styles.baris1}> - </Text>
+        <Text style={styles.baris1}>{BANDARA[Tujuan].bandara_nama}</Text> 
     </View>
-    <View style={styles.row}>
-      <Text style={styles.col5}>
+    <View style={styles.baris}>
+      <Text style={styles.baris2}>
         {MASKAPAI[maskapai_id].maskapai_nama}
         </Text>
-      <Text style={styles.col5}>{Tanggal}</Text>
+      <Text style={styles.baris2}>{Tanggal}</Text>
     </View>
   </View>
 );
@@ -208,16 +208,16 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     elevation: 5,
   },
-  row: {
+  baris: {
     flexDirection: 'row',
     flexWrap: 'wrap',
     alignItems: 'stretch',
   },
-  col: {
+  baris1: {
     width: '30%',
     textAlign: 'center',
   },
-  col5:{
+  baris2:{
     width: '50%',
     fontWeight: 'bold',
     textAlign:'center',
